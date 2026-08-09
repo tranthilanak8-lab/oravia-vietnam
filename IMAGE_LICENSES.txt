@@ -1,9 +1,0 @@
-ORAVIA V19 FINAL IMAGE NOTES
-
-VEHICLE PHOTOS
-The vehicle photographs in assets/vehicles/ were supplied by the website owner in this project and are used as provided.
-
-CRUISE VISUALS
-The cruise cards use original ORAVIA SVG representative illustrations created for this website. They are intentionally not photographs of the named vessels. This avoids using a third-party ship photograph without permission.
-
-Cruise catalogue names are product/operator names used for customer enquiry and comparison. Final vessel, cabin, itinerary and availability must be confirmed before booking.
