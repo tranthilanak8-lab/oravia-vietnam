@@ -1,0 +1,49 @@
+ORAVIA EMAIL TEMPLATES — V14
+
+1) INTERNAL NEW LEAD
+Subject: [ORAVIA] New {{service}} enquiry — {{name}}
+
+A new enquiry has been received.
+
+Service: {{service}}
+Product: {{product}}
+Name: {{name}}
+Email: {{email}}
+Nationality: {{nationality}}
+Travel date: {{travel_date}}
+Travellers: {{travellers}}
+
+Message:
+{{message}}
+
+Next action:
+Review the enquiry and reply from the CRM/inbox. Do not send sensitive passport information through ordinary email.
+
+2) CUSTOMER ACKNOWLEDGEMENT
+Subject: We received your enquiry — ORAVIA
+
+Hi {{first_name}},
+
+Thank you for contacting ORAVIA.
+
+We have received your {{service}} enquiry and will review the details provided. We will confirm the suitable options and any next steps directly with you.
+
+If we need additional information, we will let you know.
+
+Kind regards,
+ORAVIA
+Vietnam Visa & Travel
+Where Journeys Blossom
+
+3) QUOTE FOLLOW-UP
+Subject: Following up on your ORAVIA enquiry
+
+Hi {{first_name}},
+
+Just following up on your recent enquiry with ORAVIA.
+
+If you are still planning your Vietnam trip, we would be happy to continue with the next step and confirm the available option for you.
+
+Kind regards,
+ORAVIA
+Vietnam Visa & Travel
