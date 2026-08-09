@@ -1,0 +1,12 @@
+ORAVIA V20.1 FINAL CHECKED
+
+Checked:
+- Local cruise visual assets are included under assets/cruises/.
+- cruises.html no longer depends on external Wikimedia image URLs.
+- Airport Transfer / Private Car images remain local under assets/cars/ and are referenced by services.html.
+- Main navigation order: Vietnam Visa, Fast Track, Tours, Cruises, Services, Explore, About.
+- Services excludes Private Van, Intercity Transfer and Travel Enquiry.
+- Cruise structure: Lan Ha (Overnight Luxury/Premium/Classic + Day), Ha Long (Overnight Luxury/Premium/Classic + Day), Bai Tu Long (Overnight).
+
+Important image note:
+Cruise visuals in this package are original illustrative SVG artwork. They are intentionally not presented as photographs of the named vessels. This avoids misleading customers and avoids third-party photo licensing dependencies.
