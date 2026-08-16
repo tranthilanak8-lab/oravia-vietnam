@@ -1,0 +1,27 @@
+name: Add cruise catalogue images
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/cruises/*.webp'
+      - 'cruises.html'
+      - '.github/scripts/inject_catalogue_images.py'
+      - '.github/workflows/add-catalogue-images.yml'
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inject catalogue images
+        run: python .github/scripts/inject_catalogue_images.py
+      - name: Commit changes
+        run: |
+          git config user.name 'oravia-bot'
+          git config user.email 'oravia-bot@users.noreply.github.com'
+          git add cruises.html
+          git diff --cached --quiet || git commit -m 'Add cruise images to catalogue cards'
+          git push
