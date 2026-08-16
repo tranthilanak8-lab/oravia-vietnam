@@ -5,7 +5,8 @@ on:
   push:
     paths:
       - 'assets/cruises/*.webp'
-      - '.github/scripts/inject_cruise_images.py'
+      - 'index.html'
+      - 'style.css'
       - '.github/workflows/add-cruise-images.yml'
 
 jobs:
@@ -14,13 +15,57 @@ jobs:
     permissions:
       contents: write
     steps:
-      - uses: actions/checkout@v4
-      - name: Inject cruise hero images
-        run: python .github/scripts/inject_cruise_images.py
+      - uses: actions/checkout@v6
+      - name: Add cruise images to homepage cards
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          index = Path('index.html')
+          assets = Path('assets/cruises')
+          html = index.read_text(encoding='utf-8')
+
+          pattern = re.compile(
+              r'(<div class="card">\s*<div class="body">)(.*?<a class="link" href="cruises/([^\"]+)\.html">View Cruise →</a>)',
+              re.S,
+          )
+
+          def find_asset(slug):
+              for ext in ('.webp', '.jpg', '.jpeg', '.png'):
+                  p = assets / f'{slug}{ext}'
+                  if p.exists():
+                      return p.name
+              files = [p for p in assets.iterdir() if p.is_file()]
+              for p in files:
+                  if p.stem == slug or p.stem.startswith(slug + '-') or slug.startswith(p.stem + '-'):
+                      return p.name
+              return None
+
+          def replace(match):
+              opening, rest, slug = match.groups()
+              whole = match.group(0)
+              if 'cruise-home-photo' in whole:
+                  return whole
+              filename = find_asset(slug)
+              if not filename:
+                  return whole
+              photo = f'<div class="cruise-home-photo" style="background-image:url(\'assets/cruises/{filename}\')"></div>'
+              return opening + photo + rest
+
+          index.write_text(pattern.sub(replace, html), encoding='utf-8')
+
+          css = Path('style.css')
+          css_text = css.read_text(encoding='utf-8')
+          marker = '/* HOMEPAGE CRUISE IMAGES */'
+          if marker not in css_text:
+              css_text += '''\n\n/* HOMEPAGE CRUISE IMAGES */\n.cruise-home-photo{height:220px;background-size:cover;background-position:center;position:relative;overflow:hidden}\n.cruise-home-photo:after{content:"";position:absolute;inset:auto 0 0;height:72px;background:linear-gradient(transparent,rgba(7,31,25,.48));pointer-events:none}\n.card:has(.cruise-home-photo){overflow:hidden}\n.card:has(.cruise-home-photo) .body{padding-top:21px}\n@media(max-width:760px){.cruise-home-photo{height:205px}}\n'''
+              css.write_text(css_text, encoding='utf-8')
+
       - name: Commit changes
         run: |
           git config user.name 'oravia-bot'
           git config user.email 'oravia-bot@users.noreply.github.com'
-          git add cruises/*.html
-          git diff --cached --quiet || git commit -m 'Add cruise hero images to 28 cruise pages'
+          git add index.html style.css
+          git diff --cached --quiet || git commit -m 'Show cruise images on homepage'
           git push
