@@ -1,0 +1,26 @@
+name: Add cruise images
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'assets/cruises/*.webp'
+      - '.github/scripts/inject_cruise_images.py'
+      - '.github/workflows/add-cruise-images.yml'
+
+jobs:
+  inject:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - name: Inject cruise hero images
+        run: python .github/scripts/inject_cruise_images.py
+      - name: Commit changes
+        run: |
+          git config user.name 'oravia-bot'
+          git config user.email 'oravia-bot@users.noreply.github.com'
+          git add cruises/*.html
+          git diff --cached --quiet || git commit -m 'Add cruise hero images to 28 cruise pages'
+          git push
