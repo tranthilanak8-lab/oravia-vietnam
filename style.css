@@ -367,3 +367,49 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
   }
 }
 
+/* Cruise detail pages: isolate their compact, two-column hero from the
+   full-bleed homepage hero styling above. */
+.detail .hero{
+  min-height:0;
+  display:grid;
+  grid-template-columns:minmax(0,.95fr) minmax(0,1.05fr);
+  gap:clamp(28px,4vw,54px);
+  align-items:center;
+  color:var(--ink);
+  background:none;
+  position:static;
+  overflow:visible;
+}
+.detail .hero::after{content:none}
+.detail .hero>div:first-child{min-width:0}
+.detail .hero h1{
+  color:var(--forest);
+  font-size:clamp(38px,4.25vw,58px);
+  line-height:1.06;
+  letter-spacing:-1.8px;
+}
+.detail .hero p{
+  max-width:100%;
+  margin-bottom:28px;
+  color:var(--muted);
+  font-size:16px;
+  line-height:1.7;
+}
+.detail .hero .cruise-hero-image{
+  width:100%;
+  height:clamp(320px,30vw,370px)!important;
+  min-height:0!important;
+  aspect-ratio:auto;
+  transform:none;
+  transform-origin:center;
+  clip-path:none;
+  border-radius:22px;
+  object-fit:cover;
+  object-position:center;
+}
+@media(max-width:800px){
+  .detail .hero{grid-template-columns:minmax(0,1fr);gap:28px}
+  .detail .hero h1{font-size:clamp(36px,10vw,48px)}
+  .detail .hero .cruise-hero-image{height:270px!important}
+}
+
