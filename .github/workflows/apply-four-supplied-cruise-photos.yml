@@ -1,0 +1,42 @@
+name: Apply four supplied cruise photos
+
+on:
+  push:
+    branches: [main]
+
+permissions:
+  contents: write
+
+jobs:
+  apply:
+    if: github.event.head_commit.message != 'Apply four supplied cruise photos'
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Decode standardized images
+        shell: bash
+        run: |
+          set -euo pipefail
+          cat .upload/hp.aa .upload/hp.ab | base64 -d > assets/cruises/ha-long-princess-cruise.webp
+          cat .upload/fa.aa .upload/fa.ab .upload/fa.ac | base64 -d > assets/cruises/fantasea-cruise-3-star.webp
+          cat .upload/lr.aa | base64 -d > assets/cruises/la-regina-grand-cruise.webp
+          cat .upload/ve.aa .upload/ve.ab | base64 -d > assets/cruises/velar-of-the-sea.webp
+      - name: Update existing card image URLs
+        shell: bash
+        run: |
+          set -euo pipefail
+          sed -i 's#assets/cruises/fantasea-cruise-3-star\.webp?v=[^"]*#assets/cruises/fantasea-cruise-3-star.webp?v=20260919-4supplied#g' cruises.html
+          sed -i 's#assets/cruises/velar-of-the-sea\.webp?v=[^"]*#assets/cruises/velar-of-the-sea.webp?v=20260919-4supplied#g' cruises.html
+          sed -i 's#../assets/cruises/fantasea-cruise-3-star\.webp?v=[^"]*#../assets/cruises/fantasea-cruise-3-star.webp?v=20260919-4supplied#g' cruises/fantasea-cruise-3-star.html || true
+          sed -i 's#../assets/cruises/velar-of-the-sea\.webp?v=[^"]*#../assets/cruises/velar-of-the-sea.webp?v=20260919-4supplied#g' cruises/velar-of-the-sea.html || true
+      - name: Commit and clean upload files
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf .upload
+          rm -f .github/workflows/apply-four-supplied-cruise-photos.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/cruises/ha-long-princess-cruise.webp assets/cruises/fantasea-cruise-3-star.webp assets/cruises/la-regina-grand-cruise.webp assets/cruises/velar-of-the-sea.webp cruises.html cruises/fantasea-cruise-3-star.html cruises/velar-of-the-sea.html .github/workflows/apply-four-supplied-cruise-photos.yml
+          git commit -m "Apply four supplied cruise photos"
+          git push
