@@ -320,3 +320,50 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
 .card:has(.cruise-home-photo){overflow:hidden}
 .card:has(.cruise-home-photo) .body{padding-top:21px}
 @media(max-width:760px){.cruise-home-photo{height:205px}}
+
+/* CODEX CRUISE IMAGE FIX 2026-09-19 */
+.cruise-visual{
+  position:relative;
+  height:245px!important;
+  overflow:hidden;
+  background:linear-gradient(135deg,#dfe9e4,#f4eee0);
+}
+.cruise-visual img{
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center center;
+  image-rendering:auto;
+  transform:scale(1.5);
+  transform-origin:52% 55%;
+  filter:saturate(1.03) contrast(1.02);
+}
+.cruise-visual span{
+  position:absolute;
+  left:18px;
+  bottom:15px;
+  z-index:3;
+}
+.cruise-hero-image{
+  width:100%;
+  height:330px;
+  min-height:330px;
+  display:block;
+  object-fit:cover;
+  object-position:center center;
+  aspect-ratio:16/9;
+  image-rendering:auto;
+  transform:scale(1.5);
+  transform-origin:52% 55%;
+  clip-path:inset(0 round 22px);
+  filter:saturate(1.03) contrast(1.02);
+}
+@media(max-width:800px){
+  .cruise-hero-image{
+    height:260px;
+    min-height:260px;
+    transform:scale(1.45);
+  }
+}
+
