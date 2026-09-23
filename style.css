@@ -443,3 +443,6 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
 .post-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
 .post-pair .post-fig{margin:18px 0 22px}
 @media(max-width:560px){.post-pair{grid-template-columns:1fr}}
+.post-checks{list-style:none;margin-left:0!important}
+.post-checks li{padding-left:28px;position:relative;margin-bottom:8px}
+.post-checks li:before{content:"✓";position:absolute;left:0;top:0;color:var(--forest);font-weight:800}
