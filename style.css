@@ -437,3 +437,9 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
 .post-more li{padding:8px 0;border-bottom:1px solid var(--line)}
 .post-more a{color:var(--forest);font-weight:600}
 .post-more a:hover{text-decoration:underline}
+.post-fig{margin:18px 0 22px}
+.post-fig img{width:100%;height:auto;aspect-ratio:4/3;object-fit:cover;border-radius:14px;box-shadow:var(--shadow-sm);background:var(--cream)}
+.post-fig figcaption{font-size:13px;color:var(--muted);margin-top:8px;text-align:center}
+.post-pair{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.post-pair .post-fig{margin:18px 0 22px}
+@media(max-width:560px){.post-pair{grid-template-columns:1fr}}
