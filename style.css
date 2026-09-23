@@ -414,55 +414,26 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
 }
 
 
-/* ===== Airport Transfer page ===== */
-.at-hero{padding:70px 0 80px;background:linear-gradient(180deg,var(--cream-2),#fff)}
-.at-hero-grid{display:grid;grid-template-columns:1fr 1.05fr;gap:48px;align-items:center}
-.at-hero h1{color:var(--forest);font-size:clamp(38px,5vw,62px);letter-spacing:-2px}
-.at-hero p{color:var(--muted);font-size:16px;max-width:560px}
-.at-hero-btns{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
-.at-ghost{border:1px solid var(--forest);color:var(--forest);background:#fff}
-.at-img{position:relative;overflow:hidden;background:linear-gradient(135deg,var(--gold-soft),var(--cream) 55%,#dfe9e4);}
-.at-img:not(:has(img))::after{content:"Photo coming soon";position:absolute;inset:0;display:flex;align-items:center;justify-content:center;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;color:var(--forest-2);opacity:.55}
-.at-img img{width:100%;height:100%;object-fit:cover}
-.at-hero-img{border-radius:var(--radius);aspect-ratio:4/3;box-shadow:var(--shadow)}
-.at-route{position:absolute;left:16px;right:16px;bottom:16px;z-index:2;background:rgba(18,59,50,.86);color:#fff;font-size:13px;font-weight:600;padding:10px 16px;border-radius:999px;text-align:center}
-.at-num{display:inline-flex;width:22px;height:22px;border-radius:6px;background:var(--forest);color:#fff;align-items:center;justify-content:center;font-size:11px;letter-spacing:0;margin-right:6px}
-.at-features{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.at-feature{background:#fff;border:1px solid var(--line);border-radius:18px;padding:26px;box-shadow:var(--shadow-sm)}
-.at-feature h3{font-size:19px;color:var(--forest);margin:14px 0 6px;letter-spacing:-.3px}
-.at-feature p{font-size:13.5px;color:var(--muted)}
-.at-ico{display:inline-flex;width:48px;height:48px;border-radius:50%;background:var(--cream);align-items:center;justify-content:center}
-.at-ico svg{width:24px;height:24px;fill:none;stroke:var(--forest);stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
-.at-lead{margin-top:32px;text-align:center;font-size:17px;color:var(--forest);font-weight:600}
-.at-vehicles{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
-.at-vehicle{background:#fff;border:1px solid var(--line);border-radius:18px;overflow:hidden;box-shadow:var(--shadow-sm);display:flex;flex-direction:column}
-.at-vehicle .at-img{aspect-ratio:4/3}
-.at-vbody{padding:18px;display:flex;flex-direction:column;gap:8px;flex:1}
-.at-vbody h3{font-size:18px;color:var(--forest);letter-spacing:-.3px}
-.at-models{font-size:12px;color:var(--muted)}
-.at-cap{display:flex;gap:14px;font-size:12px;color:var(--muted);border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:8px 0}
-.at-cap b{color:var(--ink);font-size:14px}
-.at-vbody>p:not(.at-models){font-size:13px;color:var(--muted);flex:1}
-.at-vbody .btn{justify-content:center;text-align:center;margin-top:6px}
-.at-help{font-size:14px;margin-top:26px;background:#fff;border:1px solid var(--line)}
-.at-help i{display:block;margin-top:4px;color:var(--forest)}
-.at-how{display:grid;grid-template-columns:1.2fr 1fr;gap:36px;align-items:start}
-.at-steps{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.at-step{display:flex;gap:14px;background:var(--cream-2);border:1px solid var(--line);border-radius:18px;padding:22px}
-.at-stepn{flex:0 0 36px;height:36px;border-radius:50%;background:var(--forest);color:#fff;display:flex;align-items:center;justify-content:center;font-weight:800}
-.at-step h3{font-size:17px;color:var(--forest);margin-bottom:6px}
-.at-step ul{list-style:none;font-size:13px;color:var(--muted)}
-.at-step li:before{content:"• ";color:var(--gold)}
-.at-step p{font-size:13px;color:var(--muted);margin-top:4px}
-.at-airports{background:#fff;border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:var(--shadow-sm)}
-.at-airports>h3{font-size:18px;color:var(--forest);margin-bottom:10px}
-.at-airport{display:flex;gap:14px;padding:14px 0;border-top:1px solid var(--line);font-size:13px}
-.at-airport .at-img{flex:0 0 92px;height:66px;border-radius:10px}
-.at-airport .at-img::after{font-size:8px}
-.at-airport b{color:var(--gold);letter-spacing:1px}
-.at-airport strong{color:var(--forest)}
-.at-airport p{color:var(--muted);font-size:12.5px}
-.at-sign{text-align:center;margin-top:18px;font-style:italic;color:var(--forest);font-size:18px}
-@media(max-width:1100px){.at-vehicles{grid-template-columns:repeat(3,1fr)}.at-how{grid-template-columns:1fr}}
-@media(max-width:850px){.at-hero-grid{grid-template-columns:1fr}.at-features{grid-template-columns:1fr 1fr}.at-vehicles{grid-template-columns:1fr 1fr}}
-@media(max-width:560px){.at-features,.at-vehicles,.at-steps{grid-template-columns:1fr}.head{flex-direction:column;align-items:start}}
+/* ===== Airport Transfer posts ===== */
+.post{padding:56px 0 80px}
+.post-wrap{width:min(760px,92%);margin:auto}
+.post-crumb{font-size:12px;color:var(--muted);margin-bottom:18px}
+.post-crumb a{color:var(--forest)}
+.post h1{font-size:clamp(30px,4.2vw,44px);letter-spacing:-1px;line-height:1.12;color:var(--forest);margin-bottom:14px}
+.post-sub{font-size:18px;color:var(--muted);margin-bottom:28px}
+.post h2{font-size:22px;color:var(--forest);margin:34px 0 10px;letter-spacing:-.3px}
+.post h3{font-size:18px;color:var(--ink);margin:24px 0 6px}
+.post p{font-size:16px;margin-bottom:14px}
+.post ul{margin:0 0 16px 22px;font-size:16px}
+.post li{margin-bottom:4px}
+.post .note{font-size:14px;color:var(--muted);font-style:italic}
+.post .closing{font-weight:700;color:var(--forest)}
+.post-cta{margin:34px 0 10px}
+.post-design{width:min(1168px,96%);margin:0 auto}
+.post-design img{width:100%;height:auto;border-radius:12px;box-shadow:var(--shadow-sm)}
+.post-more{border-top:1px solid var(--line);margin-top:44px;padding-top:24px}
+.post-more h2{margin-top:0}
+.post-more ul{list-style:none;margin-left:0}
+.post-more li{padding:8px 0;border-bottom:1px solid var(--line)}
+.post-more a{color:var(--forest);font-weight:600}
+.post-more a:hover{text-decoration:underline}
