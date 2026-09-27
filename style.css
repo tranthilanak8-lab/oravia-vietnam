@@ -519,3 +519,11 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
 .post-card p{font-size:14px;color:var(--muted);margin-bottom:8px}
 .post-card span{font-size:13px;font-weight:700;color:var(--gold)}
 @media(max-width:560px){.post-cards{grid-template-columns:1fr}}
+/* Visa menu: eVisa submenu */
+.subdrop{position:relative;display:grid}
+.subdrop>a{display:flex;justify-content:space-between;align-items:center;gap:12px}
+.subchev{font-size:15px;color:var(--gold);line-height:1}
+.submenu{display:none;position:absolute;left:calc(100% + 16px);top:-12px;min-width:230px;background:#fff;border:1px solid var(--line);border-radius:14px;padding:12px 15px;box-shadow:0 18px 45px rgba(18,59,50,.16);grid-template-columns:1fr;gap:2px;z-index:110}
+.submenu:before{content:"";position:absolute;left:-18px;top:0;width:18px;height:100%}
+.subdrop:hover .submenu,.subdrop:focus-within .submenu{display:grid}
+@media(max-width:650px){.submenu{display:grid;position:static;box-shadow:none;border:0;padding:0 0 0 14px;min-width:0}.submenu:before{display:none}.subchev{display:none}}
