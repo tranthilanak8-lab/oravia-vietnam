@@ -498,3 +498,24 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
 @media(max-width:1000px){.pc-frs{grid-template-columns:repeat(3,1fr)}.pc-sol{grid-template-columns:1fr 1fr}.pc-sol-car{grid-column:1/-1;order:-1;max-width:640px;margin:0 auto}.pc-dests{grid-template-columns:1fr 1fr}}
 @media(max-width:760px){.pc-hero{padding:44px 0}.pc-hero-grid{grid-template-columns:1fr}.pc-frs{grid-template-columns:1fr 1fr}.pc-sol{grid-template-columns:1fr}.pc-dests{grid-template-columns:1fr}.pc-cta-in{flex-direction:column;align-items:flex-start}}
 @media(max-width:760px){.pc-sec{padding:32px 0}}
+/* ===== SEO article blocks ===== */
+.post a:not(.btn):not(.post-card){color:var(--forest);text-decoration:underline;text-underline-offset:2px}
+.post-box{background:var(--cream);border:1px solid var(--line);border-left:4px solid var(--gold);border-radius:14px;padding:20px 22px;margin:22px 0}
+.post-box h3{margin:0 0 8px;color:var(--forest)}
+.post-box ul{margin-bottom:0}
+.post-steps{margin:0 0 18px 22px;font-size:16px}
+.post-steps li{margin-bottom:10px;padding-left:4px}
+.post-ctabox{background:var(--forest);color:#fff;border-radius:18px;padding:28px 28px 30px;margin:36px 0 18px}
+.post-ctabox h2{color:#fff!important;margin:0 0 8px!important}
+.post-ctabox p{color:#dfeae5}
+.post-faq details{border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px;background:#fff}
+.post-faq summary{cursor:pointer;font-weight:700;color:var(--ink);font-size:16px}
+.post-faq details[open] summary{margin-bottom:8px;color:var(--forest)}
+.post-faq p{margin:0;font-size:15px;color:var(--muted)}
+.post-cards{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin:22px 0}
+.post-card{display:block;border:1px solid var(--line);border-radius:14px;padding:18px 20px;background:#fff;box-shadow:var(--shadow-sm);transition:transform .15s}
+.post-card:hover{transform:translateY(-2px)}
+.post-card h3{margin:0 0 6px;color:var(--forest);font-size:18px}
+.post-card p{font-size:14px;color:var(--muted);margin-bottom:8px}
+.post-card span{font-size:13px;font-weight:700;color:var(--gold)}
+@media(max-width:560px){.post-cards{grid-template-columns:1fr}}
