@@ -1,8 +1,8 @@
 :root{
-  --forest:#123b32;
-  --forest-2:#1d5a4b;
-  --gold:#c9a35b;
-  --gold-soft:#e8d5ae;
+  --forest:#123A66;
+  --forest-2:#1B4F8C;
+  --gold:#E08A3C;
+  --gold-soft:#F6CDA0;
   --cream:#f7f3ea;
   --cream-2:#fbf9f4;
   --ink:#17231f;
@@ -34,12 +34,8 @@ header{
 }
 .nav{min-height:82px;display:flex;align-items:center;justify-content:space-between;gap:24px}
 .logo{display:flex;align-items:center;gap:12px;flex:0 0 auto}
-.logo .orchid{width:43px;height:43px;position:relative}
-.orchid i{position:absolute;border:2px solid var(--gold);border-radius:70% 30% 70% 30%;width:20px;height:28px}
-.orchid i:nth-child(1){left:1px;top:7px;transform:rotate(-34deg)}
-.orchid i:nth-child(2){right:1px;top:7px;transform:rotate(34deg)}
-.orchid i:nth-child(3){left:12px;top:0}
-.orchid i:nth-child(4){left:11px;bottom:0;transform:rotate(180deg)}
+.logo .orchid{width:43px;height:43px;display:block}
+.logo .orchid svg{width:100%;height:100%;display:block}
 .brand strong{display:block;color:var(--forest);font-size:22px;letter-spacing:2px;line-height:1}
 .brand small{display:block;color:#7b8580;font-size:8px;letter-spacing:1.8px;text-transform:uppercase;margin-top:5px}
 nav{display:flex;align-items:center;gap:24px;font-size:13px;font-weight:750;white-space:nowrap}
