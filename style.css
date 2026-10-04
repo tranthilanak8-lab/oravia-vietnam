@@ -668,3 +668,24 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
 @media (max-width:900px){.td-grid{grid-template-columns:minmax(0,1fr)}.td-side{position:static}.td-facts{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.td-two{grid-template-columns:1fr}.td-gallery{gap:8px}.td{padding-top:32px}}
 /* TOUR DETAIL END */
+
+
+/* TOUR MENU START */
+.dropdown.tourmenu{min-width:210px;gap:2px;padding:12px 15px}
+.tourmenu .subdrop>a{font-size:12.5px;font-weight:750;padding:7px 0}
+.tourmenu .submenu{min-width:240px}
+.tourmenu .submenu .submenu{min-width:270px}
+.tourmenu .subdrop .submenu{display:none}
+.tourmenu .subdrop:hover>.submenu,.tourmenu .subdrop:focus-within>.submenu{display:grid}
+.tourmenu .subdrop.flip>a .subchev{transform:scaleX(-1)}
+.tourmenu .subdrop.flip>.submenu{left:auto;right:calc(100% + 16px)}
+.tourmenu .subdrop.flip>.submenu:before{left:auto;right:-18px}
+.tourmenu .menu-all{color:var(--gold)!important;border-top:1px solid var(--line);margin-top:4px;padding-top:9px!important}
+@media(max-width:650px){.tourmenu .subdrop .submenu{display:grid}.tourmenu .submenu .submenu{display:none!important}}
+/* TOUR MENU END */
+
+/* DAILY CAT START */
+.daily-cat{display:none}
+.daily-cat:target{display:block}
+.daily-back{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--forest)}
+/* DAILY CAT END */
