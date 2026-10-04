@@ -689,3 +689,15 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
 .daily-cat:target{display:block}
 .daily-back{display:inline-block;margin-top:10px;font-size:13px;font-weight:700;color:var(--forest)}
 /* DAILY CAT END */
+
+/* CAT PAGE START */
+.catpage{padding:44px 0 90px}
+.crumbs{font-size:13px;color:var(--muted);display:flex;gap:8px;flex-wrap:wrap;margin-bottom:14px}
+.crumbs a{color:var(--forest);font-weight:700}
+.crumbs b{color:var(--ink);font-weight:700}
+.cat-title{font-size:clamp(34px,4.6vw,54px)!important;line-height:1.05;letter-spacing:-1.4px!important;color:var(--forest);margin:0 0 10px!important}
+.cat-sub{color:var(--muted);font-size:16px;max-width:680px;margin:0 0 30px}
+.cat-empty{background:var(--cream);border:1px solid var(--line);border-radius:var(--radius);padding:34px;max-width:680px}
+.cat-empty h2{font-size:24px!important;margin:0 0 8px!important}
+.cat-empty p{color:var(--muted);line-height:1.6;margin-bottom:22px}
+/* CAT PAGE END */
