@@ -1,0 +1,25 @@
+============================================== 
+ Deploying oravia-vietnam to Cloudflare 
+============================================== 
+
+ ⛅️ wrangler 4.147.0
+────────────────────
+🌀 Building list of assets...
+✨ Read 874 files from the assets directory C:\Users\Admin\oravia-vietnam
+🌀 Starting asset upload...
+🌀 Found 3 new or modified static assets to upload. Proceeding with upload...
++ /.wrangler/tmp/deploy-7fIsPu/no-op-worker.js.map
++ /index.html
++ /style.css
+Uploaded 1 of 3 assets
+Uploaded 2 of 3 assets
+Uploaded 3 of 3 assets
+✨ Success! Uploaded 3 files (619 already uploaded) (1.16 sec)
+
+Total Upload: 0.35 KiB / gzip: 0.26 KiB
+Uploaded oravia-vietnam (6.64 sec)
+Deployed oravia-vietnam triggers (0.70 sec)
+  https://oravia-vietnam.tranthilan-ak8.workers.dev
+Current Version ID: b49f914b-71a5-4cb6-9855-cd1a66ae06cc
+ 
+=== DEPLOY SCRIPT FINISHED === 
