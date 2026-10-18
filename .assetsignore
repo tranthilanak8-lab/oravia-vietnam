@@ -1,0 +1,10 @@
+.git
+.github
+.upload
+.wrangler
+.gitignore
+.cloudflare-deploy-trigger
+*.bat
+*.txt
+wrangler.toml
+node_modules
