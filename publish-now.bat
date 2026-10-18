@@ -4,7 +4,7 @@ if exist "C:\Program Files\nodejs\node.exe" set "PATH=C:\Program Files\nodejs;%P
 if exist "C:\Program Files\Git\cmd\git.exe" set "PATH=C:\Program Files\Git\cmd;%PATH%"
 echo ===== GIT ===== > publish-log.txt
 git add -A >> publish-log.txt 2>&1
-git commit -m "Remove sample placeholder tours from Central, South, Signature Journeys and Tours pages" >> publish-log.txt 2>&1
+git commit -m "Add Ha Giang Loop multi-day tours (2D3N, 3D4N, 4D5N) and menu link" >> publish-log.txt 2>&1
 git push >> publish-log.txt 2>&1
 echo ===== DEPLOY ===== >> publish-log.txt
 call npx wrangler deploy >> publish-log.txt 2>&1
