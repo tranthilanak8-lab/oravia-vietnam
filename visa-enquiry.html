@@ -28,7 +28,7 @@
 <a class="navcta" href="plan.html">Plan Your Trip</a>
 </nav></div></header>
 <section class="pagehero"><div class="wrap"><div class="eyebrow" style="color:var(--forest)">Visa Enquiry</div><h1>Tell us about<br/>your visa.</h1><p>We will review the details you provide and confirm the suitable service and quote. No public pricing and no payment on this enquiry page.</p></div></section>
-<section><div class="wrap" style="max-width:950px"><div class="panel"><form onsubmit="event.preventDefault();document.getElementById('sent').style.display='block';">
+<section><div class="wrap" style="max-width:950px"><div class="panel"><form onsubmit="return artySend(this)">
 <div class="formgrid">
 <div class="field"><label>Full name</label><input required=""/></div><div class="field"><label>Email</label><input required="" type="email"/></div>
 <div class="field"><label>Nationality</label><input placeholder="e.g. Australia" required=""/></div><div class="field"><label>Number of applicants</label><input min="1" type="number" value="1"/></div>
@@ -39,7 +39,13 @@
 </div>
 <div class="notice">Please do not send sensitive passport images through this basic enquiry form. If documents are needed, Arty Vietnam Travel will provide a secure method for submitting them.</div>
 <button class="btn gold" type="submit">Send Visa Enquiry →</button></form>
-<div class="panel" id="sent" style="display:none;margin-top:18px;background:#f6f8f5"><h3 style="color:var(--forest)">Enquiry received — demo mode</h3><p style="color:var(--muted);margin-top:6px">Before launch, connect this form to your secure enquiry system and email/CRM.</p></div>
+<div class="panel" id="sent" style="display:none;margin-top:18px;background:#f6f8f5"><h3 style="color:var(--forest)">Almost done – please press Send</h3><p style="color:var(--muted);margin-top:6px">Your email app has opened with your enquiry. If it did not open, email us directly at <a href="mailto:tranthilan.ak8@gmail.com">tranthilan.ak8@gmail.com</a>.</p></div>
 </div></div></section>
 <footer><div class="wrap"><div class="copy">© 2026 Arty Vietnam Travel · Where Journeys Blossom. · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div></div></footer>
+<script>
+function artySend(f){var t=document.title.split('|')[0].trim(),lines=[];
+f.querySelectorAll('.field').forEach(function(d){var l=d.querySelector('label'),i=d.querySelector('input,select,textarea');if(l&&i&&String(i.value).trim())lines.push(l.textContent.trim()+': '+i.value)});
+var url='mailto:tranthilan.ak8@gmail.com?subject='+encodeURIComponent('Website enquiry – '+t)+'&body='+encodeURIComponent(lines.join('\n'));
+window.location.href=url;var s=document.getElementById('sent');if(s)s.style.display='block';return false}
+</script>
 </body></html>
