@@ -4,7 +4,7 @@ if exist "C:\Program Files\nodejs\node.exe" set "PATH=C:\Program Files\nodejs;%P
 if exist "C:\Program Files\Git\cmd\git.exe" set "PATH=C:\Program Files\Git\cmd;%PATH%"
 echo ===== GIT ===== > publish-log.txt
 git add -A >> publish-log.txt 2>&1
-git commit -m "Remove review popup; feature larger, better-looking cruises" >> publish-log.txt 2>&1
+git commit -m "Homepage: remove sections from Explore Vietnam to Travel Guides" >> publish-log.txt 2>&1
 git push >> publish-log.txt 2>&1
 echo ===== DEPLOY ===== >> publish-log.txt
 call npx --yes wrangler deploy >> publish-log.txt 2>&1
