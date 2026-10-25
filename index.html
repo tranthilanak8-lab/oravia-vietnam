@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Oravia | Vietnam Visa &amp; Travel</title><meta content="Oravia — Vietnam visa assistance and inbound tours. Where Journeys Blossom." name="description"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600&display=swap" rel="stylesheet"/><link href="style.css" rel="stylesheet"/><style>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Oravia | Vietnam Visa &amp; Travel</title><meta content="Oravia — Vietnam visa assistance and inbound tours. Where Journeys Blossom." name="description"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600&display=swap" rel="stylesheet"/><link rel="preload" as="image" href="https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1800&q=75"/><link href="style.css" rel="stylesheet"/><style>
 .ocar{position:relative}
 #outstanding-cruises{background:var(--forest)}
 #outstanding-cruises h2,#outstanding-cruises .head p{color:#fff}
@@ -28,7 +28,8 @@
 
 /* Visa section refresh */
 #visa{overflow:hidden}
-#visa .vx{grid-template-columns:.85fr 1.15fr;gap:64px}
+#visa .vx{grid-template-columns:.85fr 1.15fr;gap:64px;align-items:start}
+#visa .vx-text{padding-top:4px}
 #visa .vx-eyebrow{color:var(--forest);display:flex;align-items:center;gap:12px}
 #visa .vx-eyebrow:before{content:"";width:34px;height:2px;background:var(--gold);border-radius:2px}
 #visa .vx h2{font-size:clamp(30px,3.3vw,44px);line-height:1.08;letter-spacing:-1.2px;margin-bottom:16px}
@@ -61,6 +62,15 @@ section:not(.hero){padding:64px 0}
 #visa + section + section{padding-top:8px}
 .ocar-more{margin-top:16px}
 @media (max-width:900px){section:not(.hero){padding:48px 0}#outstanding-tours{padding-top:44px}}
+
+/* Hero: single static image, calmer type */
+.hero{min-height:540px}
+.hero-bg-img.hero-static{background-image:url("https://images.unsplash.com/photo-1528127269322-539801943592?auto=format&fit=crop&w=1800&q=75");animation:none;opacity:1;transform:none;will-change:auto}
+.hero .content{max-width:1180px;padding:72px 0 88px}
+.hero h1{max-width:640px}
+.hero h1{font-size:clamp(36px,4.3vw,56px);line-height:1.06;letter-spacing:-1.6px;margin-bottom:18px}
+.hero p{font-size:16.5px;line-height:1.65;max-width:540px;margin-bottom:28px}
+@media (max-width:900px){.hero{min-height:480px}.hero .content{padding:56px 0 72px}}
 </style>
 </head><body>
 <div class="top"><div class="wrap"><span>Vietnam Visa &amp; Inbound Travel</span><span>Local support · Private tours · Fast assistance</span></div></div>
@@ -91,7 +101,7 @@ section:not(.hero){padding:64px 0}
 </div>
 <a class="navcta" href="plan.html">Plan Your Trip</a>
 </nav></div></header>
-<section class="hero"><div class="hero-bg" aria-hidden="true"><div class="hero-bg-img hero-bg-img--1"></div><div class="hero-bg-img hero-bg-img--2"></div><div class="hero-bg-img hero-bg-img--3"></div><div class="hero-bg-img hero-bg-img--4"></div></div><div class="wrap content"><div class="eyebrow">Vietnam Visa · Tours · Cruises</div><h1>Discover Vietnam.<br/>Travel with confidence.</h1><p>From your Vietnam visa to your journey across the country, Oravia makes every step simple, personal and reliable.</p><a class="btn gold" href="visa.html">Get Vietnam Visa</a><a class="btn light" href="tours.html">Explore Vietnam Tours</a></div></section>
+<section class="hero"><div class="hero-bg" aria-hidden="true"><div class="hero-bg-img hero-static"></div></div><div class="wrap content"><div class="eyebrow">Vietnam Visa · Tours · Cruises</div><h1>Discover Vietnam.<br/>Travel with confidence.</h1><p>From your Vietnam visa to your journey across the country, Oravia makes every step simple, personal and reliable.</p><a class="btn gold" href="visa.html">Get Vietnam Visa</a><a class="btn light" href="tours.html">Explore Vietnam Tours</a></div></section>
 <div class="wrap dual"><div class="dualgrid">
 <div class="dualbox"><div class="dualbox-body"><div class="eyebrow" style="color:var(--gold)">01 · Vietnam Visa</div><h2>Start with your visa.</h2><div class="dualbox-trust"><p class="trust-line"><b>Professional. Accurate. Trusted.</b>Checked with care, from eVisa to urgent, last-minute cases.</p></div><a class="arrow" href="visa.html">Visa Information →</a></div><div class="dualbox-photo dualphoto-visa"><img src="assets/visa-guarantee-card.png" alt="Vietnam visa application with passport and Oravia's 100% customer satisfaction guarantee" loading="lazy"/></div></div>
 <div class="dualbox"><div class="dualbox-body"><div class="eyebrow" style="color:var(--gold)">02 · Vietnam Tours</div><h2>Then experience Vietnam.</h2><p>Private, tailor-made journeys for your own pace, or join one of our group tours — both designed around real itineraries across Vietnam.</p><a class="arrow" href="tours.html">Browse Tours →</a></div><div class="dualbox-photo dualphoto-tour"><img src="assets/tour-hoian-group.jpg" alt="Tour guide and travelers exploring Hoi An Ancient Town on a Vietnam group tour with Oravia" loading="lazy"/></div></div>
