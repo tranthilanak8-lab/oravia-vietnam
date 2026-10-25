@@ -668,3 +668,13 @@ hr{border:0;border-top:1px solid var(--line);margin:20px 0}
 .cat-empty h2{font-size:24px!important;margin:0 0 8px!important}
 .cat-empty p{color:var(--muted);line-height:1.6;margin-bottom:22px}
 /* CAT PAGE END */
+
+/* Header: Arty logo + larger, tighter menu */
+.logo-img{height:52px;width:auto;display:block}
+footer .logo-img{height:48px}
+.mainnav{gap:22px;font-size:13px}
+.dropdown a,.dropdown .nolink{font-size:13.5px}
+.submenu a{font-size:13.5px}
+@media(max-width:1250px){.mainnav{gap:15px;font-size:12.5px}.logo-img{height:46px}}
+@media(max-width:1100px){.mainnav{gap:12px;font-size:12px}.logo-img{height:42px}}
+@media(max-width:850px){.mainnav{gap:9px;font-size:11px}.logo-img{height:40px}}
