@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Oravia | Vietnam Visa &amp; Travel</title><meta content="Oravia — Vietnam visa assistance and inbound tours. Where Journeys Blossom." name="description"/><link href="style.css" rel="stylesheet"/><style>
+<html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width,initial-scale=1" name="viewport"/><title>Oravia | Vietnam Visa &amp; Travel</title><meta content="Oravia — Vietnam visa assistance and inbound tours. Where Journeys Blossom." name="description"/><link rel="preconnect" href="https://fonts.googleapis.com"/><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/><link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@1,9..144,600&display=swap" rel="stylesheet"/><link href="style.css" rel="stylesheet"/><style>
 .ocar{position:relative}
 #outstanding-cruises{background:var(--forest)}
 #outstanding-cruises h2,#outstanding-cruises .head p{color:#fff}
@@ -25,6 +25,35 @@
 @media (max-width:900px){.ocar-item{flex-basis:calc((100% - 22px)/2)}}
 @media (max-width:600px){.ocar-item{flex-basis:85%}.ocar-btn{display:none}}
 @media (prefers-reduced-motion:reduce){.ocar-track{scroll-behavior:auto}.ocar-item,.ocar-item .photo{transition:none}}
+
+/* Visa section refresh */
+#visa{overflow:hidden}
+#visa .vx{grid-template-columns:.85fr 1.15fr;gap:64px}
+#visa .vx-eyebrow{color:var(--forest);display:flex;align-items:center;gap:12px}
+#visa .vx-eyebrow:before{content:"";width:34px;height:2px;background:var(--gold);border-radius:2px}
+#visa .vx h2{font-size:clamp(30px,3.3vw,44px);line-height:1.08;letter-spacing:-1.2px;margin-bottom:16px}
+#visa .vx h2 em{display:block;font-family:"Fraunces",Georgia,serif;font-style:italic;font-weight:600;letter-spacing:-.5px;color:var(--forest)}
+#visa .vx p{font-size:16px;line-height:1.7}
+#visa .vx-checks{gap:10px 12px}
+#visa .vx-checks div{display:flex;align-items:center;background:#fff;border:1px solid var(--line);border-radius:999px;padding:10px 16px;font-size:13.5px;transition:transform .25s ease,box-shadow .25s ease,border-color .25s ease}
+#visa .vx-checks div:hover{transform:translateY(-2px);border-color:var(--gold);box-shadow:0 10px 24px rgba(18,58,102,.10)}
+#visa .vx-checks div:before{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:rgba(224,138,60,.15);font-size:11px;flex:none}
+#visa .vx-media{position:relative;margin:0;padding:0 0 22px 22px}
+#visa .vx-media:before{content:"";position:absolute;left:0;bottom:0;width:78%;height:78%;border-radius:var(--radius);border:2px solid var(--gold);opacity:.55}
+#visa .vx-frame{position:relative;border-radius:var(--radius);overflow:hidden;aspect-ratio:7/6;box-shadow:0 30px 70px rgba(18,58,102,.22)}
+#visa .vx-frame img{width:100%;height:100%;object-fit:cover;object-position:center top;display:block;transition:transform 1.2s cubic-bezier(.2,.7,.2,1)}
+#visa .vx-media:hover .vx-frame img{transform:scale(1.04)}
+#visa .vx-badge{position:absolute;right:-6px;top:36px;display:flex;align-items:center;gap:12px;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-radius:16px;padding:12px 18px 12px 12px;box-shadow:0 18px 40px rgba(18,58,102,.22);animation:vxFloat 5s ease-in-out infinite}
+#visa .vx-badge-ico{width:38px;height:38px;border-radius:12px;background:var(--gold);color:#fff;display:grid;place-items:center;font-weight:900;font-size:18px}
+#visa .vx-badge b{display:block;font-size:14px;color:var(--ink)}
+#visa .vx-badge small{display:block;font-size:12px;color:var(--muted)}
+@keyframes vxFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+#visa .vx-reveal{opacity:0;transform:translateY(28px);transition:opacity .9s ease,transform .9s cubic-bezier(.2,.7,.2,1)}
+#visa .vx-media.vx-reveal{transition-delay:.15s}
+#visa .vx-reveal.vx-in{opacity:1;transform:none}
+@media (max-width:900px){#visa .vx{grid-template-columns:1fr;gap:40px}#visa .vx-badge{right:8px;top:18px}}
+@media (max-width:600px){#visa .vx-checks{grid-template-columns:1fr}}
+@media (prefers-reduced-motion:reduce){#visa .vx-reveal{opacity:1;transform:none;transition:none}#visa .vx-badge{animation:none}#visa .vx-frame img{transition:none}}
 </style>
 </head><body>
 <div class="top"><div class="wrap"><span>Vietnam Visa &amp; Inbound Travel</span><span>Local support · Private tours · Fast assistance</span></div></div>
@@ -66,7 +95,7 @@
 <section id="outstanding-cruises"><div class="wrap"><div class="head"><div><div class="eyebrow">Ha Long &amp; Lan Ha Bay</div><h2>Outstanding Cruises</h2></div><p>Our favourite overnight cruises for sleeping among the limestone islands of Ha Long and Lan Ha Bay.</p></div>
 <div class="ocar" id="ocar-cruises"><button class="ocar-btn ocar-prev" type="button" aria-label="Previous">‹</button><div class="ocar-track"><div class="card ocar-item"><a class="photo" href="cruises/scarlet-pearl.html" style="background-image:url('assets/cruises/scarlet-pearl.webp')" aria-label="Scarlet Pearl"></a><div class="body"><span class="tag">Overnight Cruise</span><h3>Scarlet Pearl</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/scarlet-pearl.html">View Cruise →</a></div></div><div class="card ocar-item"><a class="photo" href="cruises/grand-pioneers.html" style="background-image:url('assets/cruises/grand-pioneers.webp')" aria-label="Grand Pioneers"></a><div class="body"><span class="tag">Luxury Cruise</span><h3>Grand Pioneers</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/grand-pioneers.html">View Cruise →</a></div></div><div class="card ocar-item"><a class="photo" href="cruises/la-casta-star.html" style="background-image:url('assets/cruises/la-casta-star.webp')" aria-label="La Casta Star"></a><div class="body"><span class="tag">Overnight Cruise</span><h3>La Casta Star</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/la-casta-star.html">View Cruise →</a></div></div><div class="card ocar-item"><a class="photo" href="cruises/athena-cruise.html" style="background-image:url('assets/cruises/athena-cruise.webp')" aria-label="Athena Cruise"></a><div class="body"><span class="tag">Overnight Cruise</span><h3>Athena Cruise</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/athena-cruise.html">View Cruise →</a></div></div><div class="card ocar-item"><a class="photo" href="cruises/catherine-cruise.html" style="background-image:url('assets/cruises/catherine-cruise.webp')" aria-label="Catherine Cruise"></a><div class="body"><span class="tag">Overnight Cruise</span><h3>Catherine Cruise</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/catherine-cruise.html">View Cruise →</a></div></div><div class="card ocar-item"><a class="photo" href="cruises/celina-of-the-sea.html" style="background-image:url('assets/cruises/celina-of-the-sea.webp')" aria-label="Celina of the Sea"></a><div class="body"><span class="tag">Overnight Cruise</span><h3>Celina of the Sea</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/celina-of-the-sea.html">View Cruise →</a></div></div><div class="card ocar-item"><a class="photo" href="cruises/velar-of-the-sea.html" style="background-image:url('assets/cruises/velar-of-the-sea.webp')" aria-label="Velar of the Sea"></a><div class="body"><span class="tag">Overnight Cruise</span><h3>Velar of the Sea</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/velar-of-the-sea.html">View Cruise →</a></div></div><div class="card ocar-item"><a class="photo" href="cruises/cycad-indochine-cruise.html" style="background-image:url('assets/cruises/cycad-indochine-cruise.webp')" aria-label="Cycad Indochine Cruise"></a><div class="body"><span class="tag">Overnight Cruise</span><h3>Cycad Indochine Cruise</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/cycad-indochine-cruise.html">View Cruise →</a></div></div><div class="card ocar-item"><a class="photo" href="cruises/star-light-cruise.html" style="background-image:url('assets/cruises/star-light-cruise.webp')" aria-label="Star Light Cruise"></a><div class="body"><span class="tag">Overnight Cruise</span><h3>Star Light Cruise</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/star-light-cruise.html">View Cruise →</a></div></div><div class="card ocar-item"><a class="photo" href="cruises/orchid-classic-cruise.html" style="background-image:url('assets/cruises/orchid-classic-cruise.webp')" aria-label="Orchid Classic Cruise"></a><div class="body"><span class="tag">Classic Cruise</span><h3>Orchid Classic Cruise</h3><div class="meta">Ha Long Bay</div><a class="link" href="cruises/orchid-classic-cruise.html">View Cruise →</a></div></div></div><button class="ocar-btn ocar-next" type="button" aria-label="Next">›</button><div class="ocar-dots"></div><div class="ocar-more"><a class="btn gold" href="cruises.html">See all cruises →</a></div></div>
 </div></section>
-<section class="cream" id="visa"><div class="wrap visa-grid"><div><div class="eyebrow" style="color:var(--forest)">Vietnam Visa</div><h2>Visa support without the confusion.</h2><p>We help travellers navigate Vietnam eVisa applications with practical guidance, urgent support and help when an application needs fixing.</p><div class="checks"><div>eVisa assistance</div><div>Urgent processing support</div><div>Visa application guidance</div><div>Fix eVisa support</div></div><a class="btn gold" href="visa.html">Check Your Visa</a></div><div class="visa-photo" role="img" aria-label="Approved Vietnam eVisa and a group of Oravia travellers smiling on arrival at a Vietnam airport" style="background-image:url('assets/visa-section-travellers.webp');background-position:center 40%"></div></div></section>
+<section class="cream" id="visa"><div class="wrap visa-grid vx"><div class="vx-text vx-reveal"><div class="eyebrow vx-eyebrow">Vietnam Visa</div><h2>Visa support <em>without the confusion.</em></h2><p>We help travellers navigate Vietnam eVisa applications with practical guidance, urgent support and help when an application needs fixing.</p><div class="checks vx-checks"><div>eVisa assistance</div><div>Urgent processing support</div><div>Visa application guidance</div><div>Fix eVisa support</div></div><a class="btn gold" href="visa.html">Check Your Visa →</a></div><figure class="vx-media vx-reveal"><div class="vx-frame"><img src="assets/visa-section-travellers.webp" alt="Approved Vietnam eVisa and a group of Oravia travellers smiling on arrival at a Vietnam airport" loading="lazy"/></div><figcaption class="vx-badge"><span class="vx-badge-ico">✓</span><span><b>eVisa approved</b><small>Welcome to Vietnam</small></span></figcaption></figure></div></section>
 <section><div class="wrap"><div class="head"><div><div class="eyebrow" style="color:var(--forest)">Questions</div><h2>Before you travel</h2></div></div>
 <div class="faq">
 <details><summary>Can I arrange my visa and tour through Oravia?</summary><p>Yes. Visa assistance and inbound tours are the two core services of Oravia, so travellers can enquire about both in one place.</p></details>
@@ -107,5 +136,9 @@
     car._update=update; update(); start();
   });
 })();
+</script>
+<script>
+(function(){var els=document.querySelectorAll('#visa .vx-reveal');if(!('IntersectionObserver' in window)){els.forEach(function(e){e.classList.add('vx-in')});return}
+var io=new IntersectionObserver(function(en){en.forEach(function(x){if(x.isIntersecting){x.target.classList.add('vx-in');io.unobserve(x.target)}})},{threshold:.18});els.forEach(function(e){io.observe(e)})})();
 </script>
 </body></html>
