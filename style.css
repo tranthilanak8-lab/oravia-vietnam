@@ -678,3 +678,4 @@ footer .logo-img{height:48px}
 @media(max-width:1250px){.mainnav{gap:15px;font-size:12.5px}.logo-img{height:46px}}
 @media(max-width:1100px){.mainnav{gap:12px;font-size:12px}.logo-img{height:42px}}
 @media(max-width:850px){.mainnav{gap:9px;font-size:11px}.logo-img{height:40px}}
+@media(max-width:760px){.navdrop{height:auto}.mainnav{row-gap:4px;flex-wrap:wrap}.navdrop>a{padding:8px 0}}
