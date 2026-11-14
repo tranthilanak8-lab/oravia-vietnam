@@ -42,7 +42,7 @@ nav{display:flex;align-items:center;gap:24px;font-size:13px;font-weight:750;whit
 nav a{transition:.2s ease}
 nav a:hover{color:var(--gold)}
 
-/* ORAVIA V18 — professional dropdown / mega navigation */
+/* ARTY V18 — professional dropdown / mega navigation */
 .nav nav{position:relative;gap:18px}
 .nav .menu{position:relative;display:block}
 .nav .menu summary{
